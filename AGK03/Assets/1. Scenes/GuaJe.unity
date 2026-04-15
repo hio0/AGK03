@@ -133,10 +133,10 @@ GameObject:
   - component: {fileID: 583005413}
   - component: {fileID: 583005412}
   - component: {fileID: 583005418}
-  - component: {fileID: 583005417}
-  - component: {fileID: 583005416}
   - component: {fileID: 583005415}
   - component: {fileID: 583005414}
+  - component: {fileID: 583005420}
+  - component: {fileID: 583005419}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -159,8 +159,8 @@ MonoBehaviour:
   charactor: {fileID: 583005418}
   player: {fileID: 583005418}
   enemyList: []
-  slime: {fileID: 583005416}
-  goblin: {fileID: 583005417}
+  slime: {fileID: 583005419}
+  goblin: {fileID: 583005420}
 --- !u!4 &583005413
 Transform:
   m_ObjectHideFlags: 0
@@ -206,7 +206,22 @@ MonoBehaviour:
   named: 
   hp: 0
   attackDamage: 0
---- !u!114 &583005416
+--- !u!114 &583005418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583005411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5869d17540296ee4486d5c2ee415ba58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  named: 
+  hp: 0
+  attackDamage: 0
+--- !u!114 &583005419
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,7 +236,7 @@ MonoBehaviour:
   named: 
   hp: 0
   attackDamage: 0
---- !u!114 &583005417
+--- !u!114 &583005420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,21 +246,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098c0cbe25664b040becca68770bbc49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  named: 
-  hp: 0
-  attackDamage: 0
---- !u!114 &583005418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583005411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5869d17540296ee4486d5c2ee415ba58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   named: 
