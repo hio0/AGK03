@@ -90,7 +90,7 @@ public class Print : MonoBehaviour
                 }
             }
 
-            /* 논리 구조는 맞았는데 이렇게 쓰는 구조가 더 빨랐다... 최적화에 노력을
+            /* 논리 구조는 맞았는데 이렇게 쓰는 구조가 더 빨랐다... 코드 최적화에 노력을
             for(int i = 0; i < result.Length; i++)
             {
                 for(int j = i+1;j < result.Length; j++)
