@@ -60,30 +60,55 @@ public class Print : MonoBehaviour
 
     void ICanThinkNAme()
     {
-        int[] result = new int[baeyoul.Length];
-
-        result = baeyoul;
+        int[] result = baeyoul;
 
         for(int i = 0; i < result.Length; i++)
         {
-            if(i < result.Length)
+            if(i < result.Length - 1) // 마지막 제외
             {
-                if (result[i] < result[i + 1]) // 다음 값이 지금 값보다 크다면 
+                if (result[i] > result[i + 1]) // 다음 값이 지금 값보다 작다면
                 {
-                    int a = 0;
-                    int b = 0;
-                    result[i] = a;
-                    result[i + 1] = b;
+                    int a = result[i];
+                    int b = result[i + 1];
 
-                    result[i + 1] = result[a];
-                    result[i] = result[b]; // 서로 바꿔치기
+                    result[i + 1] = a;
+                    result[i] = b; // 서로 바꿔치기
                 }
             }
+            else if(i == result.Length - 1) // 비교할 것이 없는 마지막 순번일 경우
+            {
+                for(int j = result.Length - 1; j > 0;j--)
+                {
+                    if (result[j] < result[j - 1]) // 이전 값들을 계속 비교해서 이전 값보다 작다
+                    {
+                        int a = result[j];
+                        int b = result[j - 1];
+
+                        result[j - 1] = a;
+                        result[j] = b; // 서로 바꿔치기
+                    }
+                }
+            }
+
+            /* 논리 구조는 맞았는데 이렇게 쓰는 구조가 더 빨랐다... 최적화에 노력을
+            for(int i = 0; i < result.Length; i++)
+            {
+                for(int j = i+1;j < result.Length; j++)
+                {
+                    if (result[i] > result[j])
+                    {
+                        int temp = result[i];
+                        result[i] = result[j];
+                        result[j] = temp;
+                    }
+                }
+            }
+            */
         }
 
-        for (int i = 0; i < result.Length; i++)
+        for (int k = 0; k < result.Length; k++)
         {
-            Debug.Log(result[i]);
+            Debug.Log(result[k]);
         }
     }
 }
